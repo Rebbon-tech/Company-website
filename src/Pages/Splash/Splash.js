@@ -4,11 +4,13 @@ import './Splash.css'
 
 const Splash = ({Splash}) => {
 
+    const slash = "//"
+
     return(
             <div className={`splash_background ${Splash}`}>
                 <div className='splash_container'>
                     <div className='loading'>
-                        <h1>`//`</h1>
+                        <h1>{slash}</h1>
                         <h1>Rebbon</h1>
                         <span className='dot bounce firstb'></span>
                         <span className='dot bounce secondb'></span>

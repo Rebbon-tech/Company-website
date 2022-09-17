@@ -9,20 +9,22 @@
 
 
 .navbar{
-    max-width: 100vw;
+    width: 100%;
     margin: auto;
-    border: 1px solid black;
     background: var(--midnight);
     height: 90px;
-    padding: 0px 128px;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    position: fixed;
+    z-index: 4;
 }
 
 
 .container{
-    height: 60px;
-    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    padding: 0px 160px;
     margin: 0;
     display: flex;
     align-items: center;
@@ -35,6 +37,21 @@
     height: fit-content;
     width: fit-content;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.navloading{
+    height: 20px;
+    width: fit-content;
+    display: flex;
+    align-content: end;
+}
+
+.navloading h1{
+    font-size: 18px;
+    color: var(--tin-white);
+    align-self: center;
 }
 
 .nav_items{
@@ -62,31 +79,26 @@
     cursor: pointer;
 }
 .btn{
-    position: relative;
+    transition: all 0.3s ease;
 }
 
 .Schedule_button{
-    border: 1px solid var(--chill-green);
-    background-color: transparent;
-    width: 154px;
+    width: 150px;
     height: 37px;
-    font-size: 14px;
-    font-weight: 300;
-    padding: 7px 5px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
     border-radius: 40px;
-    display: inline-block;
-    white-space: nowrap;
-    color: var(--chill-green);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-align: center;
 }
 
-.Schedule_button::after{
+.Schedule_button::before{
     content: '';
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
+    margin: auto;
     height: 37px;
     border-radius: 40px;
     white-space: nowrap;
@@ -94,6 +106,53 @@
     transition: all 0.3s ease;
 }
 
-.Schedule_button:hover{
-
+.Schedule_button::after{
+    content: 'Schedule a call';
+    display: inline-block;
+    width: 150px;
+    border: 1px solid var(--chill-green);
+    border-radius: 40px;
+    background-color: transparent;
+    white-space: nowrap;
+    color: var(--chill-green);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 7px 5px;
+    text-align: center;
+    position: absolute;
 }
+
+.Schedule_button:hover{
+    width: 155px;
+    height: 40px;
+}
+
+.Schedule_button:hover::after{
+    color: var(--midnight);
+    font-weight: 700;
+    width: 155px;
+    height: 39px;
+}
+
+.Schedule_button:hover::before{
+    width: 100%;
+    height: 39px;
+    transform-origin: left;
+    animation: moveforward 0.3s linear;
+}
+
+@keyframes moveforward {
+    0%, 50%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+/* .btn:hover .Schedule_button::after{
+    transition: all 1s ease;
+    width: 100%;
+} */

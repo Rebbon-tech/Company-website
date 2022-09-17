@@ -5,10 +5,14 @@ import logoIcon from '../../Assets/rebbon.svg'
 const NavBar = () => {
 
     return (
+        
         <div className="navbar">
             <div className="container">
                 <div className="logo">
                     <img className="rebbon_logo" src={logoIcon} alt="rebbon logo" />
+                    <div className='navloading'>
+                        <h1>ebbon.</h1>
+                    </div>
                 </div>
                 <div className="nav_items">
                     <div className="nav_items_list_container">
@@ -19,7 +23,7 @@ const NavBar = () => {
                         </ul>
                     </div>
                     <div className="btn">
-                    <a href="#" className="Schedule_button">Schedule a call</a>
+                    <div className="Schedule_button"> </div>
                     </div>
                 </div>
             </div>

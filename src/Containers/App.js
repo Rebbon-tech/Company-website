@@ -2,6 +2,7 @@ import NavBar from '../Components/NavBar/NavBar';
 import Splash from '../Pages/Splash/Splash';
 import './App.css';
 import React, {useState, useEffect} from 'react';
+import Home from '../Pages/Home/Home';
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
 
     useEffect(() => {
       setSplashDisplay('show');
-      window.setTimeout(() => setSplashDisplay('noShow'),delay * 500)
+      // window.setTimeout(() => setSplashDisplay('noShow'),delay * 500)
     },[]);
     
     
@@ -22,6 +23,9 @@ function App() {
         <header className="App-header">
           <NavBar />
         </header>
+        <section>
+          <Home />
+        </section>
       </div>
     );
 

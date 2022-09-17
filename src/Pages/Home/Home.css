@@ -1,0 +1,341 @@
+:root{
+    --rebbon-blue:#89E3FF;
+    --midnight:#1A222D;
+    --tin-white:#FAFFFE;
+    --chill-green:#2BD4A4;
+    --yellow:#FFEF89;
+    --peal:#FFAC89;
+}
+
+.flex{
+    display: flex;
+}
+
+.h100{
+    height: 100%;
+}
+
+.h600{
+    height: 600px;
+}
+
+.home{
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section_container{
+    display: flex;
+    position: relative;
+    max-width: 1280px;
+    padding: 0px 160px;
+    align-self: center;
+}
+
+.mnbground{
+    background-color: var(--midnight);
+}
+
+.twbground{
+    background-color: var(--tin-white);
+}
+
+/* .contents{
+     
+} */
+
+.home_first{
+    align-self: center;
+    margin-top: 90px;   
+}
+
+.home_first .slogan_h1{
+    font-size: 50px;
+    color: var(--tin-white);
+    font-weight: 700;
+    padding: 90px 0px 8px 0px;
+    line-height: 60px;
+
+}
+
+.home_first .what_we_do_p{
+    width: 470px;
+    font-size: 16px;
+    color: var(--tin-white);
+    font-weight: 200;
+    padding: 8px 0px;
+    line-height: 20px;
+}
+.colorchange{
+    animation: changeCol 1.5s linear infinite;
+}
+
+@keyframes changeCol {
+    0%, 100% {
+        color: var(--peal);
+    }
+    50%{
+        color: var(--chill-green);    
+    }
+}
+
+.home_first .btn{
+    padding: 8px 0px;
+}
+.Start_a_project_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 37px;
+    width: 150px;
+    border-radius: 40px;
+    background-color: var(--rebbon-blue);
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+.Start_a_project_btn p{
+    color: var(--midnight);
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.Start_a_project_btn img{
+    color: var(--midnight);
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+.Start_a_project_btn:hover{
+    height: 39px;
+    width: 805px;
+}
+.Start_a_project_btn:hover img{
+    margin-left: 10px;
+}
+
+.starOne{
+    position: absolute;
+    bottom: 0px;
+    right: 160px;
+    z-index: 1;
+    animation: rotate 10s linear infinite;
+    transition: all 5s ease;
+}
+
+.starTwo{
+    position: absolute;
+    bottom: -160px;
+    right: 160px;
+    z-index: 1;
+    animation: rotateBack 10s linear infinite;
+    transition: all 5s ease;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);   
+    }
+}
+@keyframes rotateBack {
+    0% {
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);   
+    }
+}
+
+.home_second{
+    width: 100%;
+}
+
+.home_second img{
+    height: 95%;
+    width: 100%;
+}
+
+.home_third .ourapproach{
+    flex: 0 50%;
+    padding: 20px;
+    margin-top: 100px;
+    padding: 8px 0px;
+}
+
+.home_third .ourapproach:hover .ourapproach_text{
+    padding: 16px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+.home_third .ourapproach p{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 8px 0px;
+    line-height: 25px;
+    color: var(--midnight);
+}
+
+.home_third .ourapproach_text{
+    width: 70%;
+}
+
+.home_third .ourapproach_btn{
+    width: fit-content;
+    cursor: pointer;
+}
+.home_third .ourapproach_btn:hover{
+    width: fit-content;
+    cursor: pointer;
+}
+.home_third .ourapproach_btn:hover div{
+    height: 6px;
+    transition: all 0.3s ease-in-out;
+    animation: changedivCol 1.5s ease-in-out infinite;
+}
+@keyframes changedivCol {
+    0%, 100% {
+        background-color: var(--peal);
+    }
+    50%{
+        background-color: var(--chill-green);    
+    }
+}
+.home_third .ourapproach_btn div{
+    height: 1.5px;
+    width: 100%;
+    background-color: var(--midnight);
+}
+
+.home_third .ourapproach .ourapproach_btn p{
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 0px 2px;
+    line-height: 25px;
+}
+.home_third .ourapproach .ourapproach_btn:hover p{
+    font-size: 20px;
+    font-weight: 800;
+    transition: all 0.3s ease-in-out;
+    padding: 8px 0px 2px;
+    margin: 8px 0px;
+}
+
+
+.home_third .ourapproach_diagram{
+    flex: 0 50%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 50px;
+}
+
+.diagram_container{
+    background-color: var(--midnight);
+    height: 95%;
+    width: 100%;
+    align-self: center;
+    padding: 10px 20px;
+    transform: rotate(10deg);
+    
+}
+
+.diagram_contents{
+    position: relative;
+}
+
+.diagram_container p{
+    color: #58677C;
+    font-weight: 700;
+    font-size: 26px;
+
+}
+
+/* diagram inside */
+
+.diagram_container .highlight{
+    color: var(--yellow);
+}
+.chighlight{
+    fill: var(--rebbon-blue);
+}
+
+.discover{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.curveOne{
+    height: 75px;
+    /* width: 100px; */
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    
+}
+
+.curveOne svg path{
+    animation: changecurve 10s linear infinite;
+    animation-delay: 10s;
+}
+
+.define{
+    position: absolute;
+    top: 115px;
+    left: 130px;
+}
+.curveTwo{
+    height: 75px;
+    /* width: 100px; */
+    position: absolute;
+    top: 155px;
+    left: 155px;
+    animation: changecurve 1s linear infinite;
+    animation-delay: 10s;
+}
+
+.design{
+    position: absolute;
+    top: 230px;
+    left: 210px;
+}
+.curveThree{
+    height: 75px;
+    /* width: 100px; */
+    position: absolute;
+    top: 270px;
+    left: 100px;
+}
+
+.develop{
+    position: absolute;
+    top: 340px;
+    left: 50px;
+}
+.curveFour{
+    height: 75px;
+    /* width: 100px; */
+    position: absolute;
+    top: 380px;
+    left: 100px;
+}
+
+.launch{
+    position: absolute;
+    top: 455px;
+    left: 245px;
+}
