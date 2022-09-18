@@ -38,7 +38,7 @@ const Home = () =>{
                     </div>
                 </div>
 
-                <div className='section mnbground'>
+                <div className='section mnbground second_section'>
                     <div className='section_container h100p'>
                         <div className='contents home_second'>
                             <img src={Showcase} alt='showcase' />

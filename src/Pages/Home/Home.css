@@ -863,9 +863,89 @@
         height: 240px;
     }
 
+    .dia {
+        height: 500px;
+    }
+
+    .diagram_container {
+        top: 0px;
+        right: 50px;
+        width: 100%;
+        height: 430px;
+        transform: rotate(15deg);
+    }
+
+    .diagram_container p {
+        font-size: 22px;
+    }
+
+    .curveOne {
+        top: 0px;
+        left: 40px;
+    }
+
+    .curveOne svg{
+        height: 109px;
+        width: 73px;
+    }
+
+    .define {
+        top: 80px;
+        left: 90px;
+    }
+
+    .curveTwo {
+        top: 110px;
+        left: 110px;
+    }
+
+    .curveTwo svg{
+        width: 94px;
+        height: 60px;
+    }
+
+    .design {
+        top: 170px;
+        left: 170px;
+    }
+
+    .curveThree {
+        top: 210px;
+        left: 70px;
+    }
+
+    .curveThree svg{
+        width: 146px;
+        height: 57px;
+    }
+    
+    .develop {
+        top: 265px;
+        left: 40px;
+    }
+
+    .curveFour {
+        top: 300px;
+        left: 75px;
+    }
+
+    .curveFour svg{
+        width: 121px;
+        height: 84px;
+    }
+    .launch {
+        top: 350px;
+        left: 200px;
+    }
+
+    .second_section{
+        height: 500px;
+    }
+
     .home_fifth h1 {
         font-size: 55px;
         line-height: 60px;
+        text-align: left;
     }
 
     .building_text_container {
@@ -888,5 +968,9 @@
     .home_sixth .start_a_project_panel h1 {
         font-size: 20px;
         width: 90%;
+    }
+    
+    .social_btn:hover{
+        font-size: 35px;
     }
 }
