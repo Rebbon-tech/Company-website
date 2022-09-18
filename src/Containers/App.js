@@ -12,7 +12,7 @@ function App() {
 
     useEffect(() => {
       setSplashDisplay('show');
-      // window.setTimeout(() => setSplashDisplay('noShow'),delay * 500)
+      window.setTimeout(() => setSplashDisplay('noShow'),delay * 500)
     },[]);
     
     

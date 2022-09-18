@@ -53,6 +53,16 @@
     color: var(--tin-white);
 }
 
+.loadingtext svg{
+    height: 50px;
+    width: 100px;
+}
+
+.loadingtext svg path{
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 0;
+}
+
 .dot{
     height: 12px;
     width: 12px;

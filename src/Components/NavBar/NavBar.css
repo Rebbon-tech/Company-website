@@ -23,7 +23,8 @@
 
 .container{
     height: 100%;
-    max-width: 1280px;
+    max-width: 1440px;
+    width: 100%;
     padding: 0px 160px;
     margin: 0;
     display: flex;
@@ -41,11 +42,12 @@
     align-items: center;
 }
 
+
 .navloading{
     height: 20px;
     width: fit-content;
     display: flex;
-    align-content: end;
+    align-content: flex-end;
 }
 
 .navloading h1{
@@ -156,3 +158,113 @@
     transition: all 1s ease;
     width: 100%;
 } */
+
+.nav_toggler_container{
+    display: none;
+}
+
+.nav_toggler{
+    height: 40px;
+    width: 45px;
+    bottom: 1px solid var(--bg-black-50);
+    cursor: pointer;
+    border-radius: 5px;
+    background: var(--midnight);
+    align-items: center;
+    justify-content: flex-end;
+    transition: all 0.3s ease;
+    display: flex;
+}
+
+.nav_toggler span {
+    height: 2px;
+    width: 18px;
+    background: var(--tin-white);
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav_toggler span::before {
+    content: "";
+    height: 2px;
+    width: 18px;
+    background: var(--tin-white);
+    position: absolute;
+    top: -6px;
+    left: 0;
+}
+
+.nav_toggler span::after {
+    content: "";
+    height: 2px;
+    width: 18px;
+    background: var(--tin-white);
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .container{
+        max-width: 1280px;
+        width: 100%;
+        padding: 0px 120px;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .container{
+        max-width: 1024px;
+        width: 100%;
+        padding: 0px 80px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 860px) {
+
+    .container{
+        max-width: 766px;
+        width: 100%;
+        padding: 0px 40px;
+    }
+
+    .nav_items{
+        display: none;
+    }
+
+    .nav_toggler_container{
+        display: block;
+    }
+
+
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .container{
+        max-width: 576px;
+        width: 100%;
+        padding: 0px 20px;
+    }
+
+    .nav_items{
+        display: none;
+    }
+
+    .nav_toggler_container{
+        display: block;
+    }
+
+
+}
