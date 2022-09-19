@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Company-website/static/css/main.fea804f0.css",
+    "main.css": "/Company-website/static/css/main.e1a5636c.css",
     "main.js": "/Company-website/static/js/main.c33a980d.js",
     "static/js/787.59c5180c.chunk.js": "/Company-website/static/js/787.59c5180c.chunk.js",
     "static/media/buildingTwo.png": "/Company-website/static/media/buildingTwo.11147d20528fff1d428d.png",
@@ -12,12 +12,12 @@
     "static/media/StarTwo.svg": "/Company-website/static/media/StarTwo.c05ebb22fb5f935de773ba531ade4b90.svg",
     "static/media/Bold-Arrow-Right.svg": "/Company-website/static/media/Bold-Arrow-Right.00f3e9d5b74aadbfc526ae69ca9286e3.svg",
     "index.html": "/Company-website/index.html",
-    "main.fea804f0.css.map": "/Company-website/static/css/main.fea804f0.css.map",
+    "main.e1a5636c.css.map": "/Company-website/static/css/main.e1a5636c.css.map",
     "main.c33a980d.js.map": "/Company-website/static/js/main.c33a980d.js.map",
     "787.59c5180c.chunk.js.map": "/Company-website/static/js/787.59c5180c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fea804f0.css",
+    "static/css/main.e1a5636c.css",
     "static/js/main.c33a980d.js"
   ]
 }
