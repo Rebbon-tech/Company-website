@@ -534,105 +534,6 @@
     margin: -50px 0px 50px;
 }
 
-.home_sixth{
-    width: 100%;
-}
-
-.home_sixth .start_a_project_panel{
-    background-color: var(--midnight);
-    height: 400px;
-    width: 100%;
-    margin: 50px 0px 0px 0px;
-    border-radius: 1000px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-    justify-content: space-evenly;
-}
-
-.home_sixth .start_a_project_panel h1{
-    font-size: 45px;
-    width: 90%;
-    text-align: center;
-    color: var(--tin-white);
-}
-
-.home_sixth .Start_a_project_btn{
-    height: 57px;
-    width: 200px;
-    background-color: var(--yellow);
-}
-
-.home_sixth .footer_btn {
-    margin: 40px 0px 20px 0px;
-}
-
-.home_sixth .get_in_touch_btn{
-    flex: 0 0 50%;
-    align-self: center;
-}
-.home_sixth .get_in_touch_btn h1{
-    font-size: 50px;
-    cursor: pointer;
-    color: var(--midnight);
-}
-
-.home_sixth .socials{
-    width: 100%;
-}
-
-.home_sixth .socials_btn{
-    height: 77px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 40px;
-    background-color: var(--chill-green);
-    white-space: nowrap;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-align: center;
-}
-
-.home_sixth .socials_btn .btn_text{
-    color: var(--midnight);
-    font-weight: 700;
-}
-
-.socials_btn_container{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    flex-direction: row;
-    transition: all 1s ease;
-}
-
-.social_btn{
-    margin: 5px 0px;
-    flex: 0 0 50%;
-    font-size: 25px;
-    cursor: pointer;
-    transition: all 1s ease-in-out;
-}
-
-.socials_btn_container:hover .social_btn{
-    flex-wrap: nowrap;
-    transition: all 0.5s ease-in-out;
-}
-
-.social_btn:hover{
-    font-size: 60px;
-    flex: 0 0 100%;
-    animation: changeCol 1.5s linear infinite;
-    transition: all 0.5s ease;
-}
-
-.rights_and_privacy{
-    margin: 20px 0px 40px 0px;
-}
-
 
 /* small laptops */
 /* small laptops */
@@ -657,6 +558,12 @@
 
 
 }
+
+
+/* smaller laptops and big tablets */
+/* smaller laptops and big tablets */
+/* smaller laptops and big tablets */
+/* smaller laptops and big tablets */
 
 
 @media screen and (max-width: 1024px) {
@@ -701,15 +608,18 @@
         margin: 15px 0px 35px 0px;
         width: 100%;
     }
-    
-
 
 }
+
+/* tablets */
+/* tablets */
+/* tablets */
+/* tablets */
 
 @media screen and (max-width: 860px) {
 
     .section_container{
-        max-width: 766px;
+        max-width: 860px;
         width: 100%;
         padding: 0px 40px;
     }
@@ -793,40 +703,14 @@
         margin: 50px 0px 50px;
     }
 
-    .home_sixth .start_a_project_panel {
-        height: 350px;
-    }
     
-
-    .home_sixth .footer_btn {
-        flex-direction: column;
-    }
-
-    .home_sixth .get_in_touch_btn {
-        flex: 0 0 100%;
-        align-self: flex-start;
-    }
-
-    .home_sixth .get_in_touch_btn h1 {
-        line-height: 130px;
-        font-size: 100px;
-        padding: 20px 0px;
-    }
-
-    .socials_btn_container {
-        margin: 20px 0px;
-        flex-direction: column;
-    }
-
-    .social_btn {
-        flex: 0 0 100%;
-        font-size: 30px;
-    }
-
-    .rights_and_privacy{
-        margin: 0px 0px 20px 0px;
-    }
 }
+
+
+/* Phones */
+/* Phones */
+/* Phones */
+/* Phones */
 
 @media screen and (max-width: 576px) {
 
@@ -961,16 +845,4 @@
         margin-top: 30px;
     }
 
-    .home_sixth .start_a_project_panel {
-        height: 250px;
-    }
-
-    .home_sixth .start_a_project_panel h1 {
-        font-size: 20px;
-        width: 90%;
-    }
-    
-    .social_btn:hover{
-        font-size: 35px;
-    }
 }
