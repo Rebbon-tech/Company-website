@@ -4,13 +4,13 @@ import logoIcon from '../../Assets/rlogo.svg'
 
 
 
-const NavBar = ({ navigate, clickedRoute }) => {
+const NavBar = ({ navigate, clickedRoute, displayNav, mobileNavopen, setMobileNavOpen }) => {
 
-    const [open, setOpen] = useState(false) 
+    
 
     return (
         
-        <div className="navbar">
+        <div className={`navbar ${displayNav ? 'showNav' : 'dontShowNav'}`}>
             <div className="container">
                 <div onClick={() => navigate("home")} className="logo">
                     {/* <img className="rebbon_logo" src={logoIcon} alt="rebbon logo" /> */}
@@ -28,11 +28,11 @@ const NavBar = ({ navigate, clickedRoute }) => {
                     </div>
                 </div>
                 <div className="nav_toggler_container">
-                    <div onClick={() => !open ? setOpen(true) : setOpen(false)} className={ open ? "nav_toggler open" : "nav_toggler"}>
+                    <div onClick={() => !mobileNavopen ? setMobileNavOpen(true) : setMobileNavOpen(false)} className={ mobileNavopen ? "nav_toggler open" : "nav_toggler"}>
                         <span></span>
                     </div>
                 </div>
-                <div className={ open ? "nav_items open" : "nav_items"}>
+                <div className={ mobileNavopen ? "nav_items open" : "nav_items"}>
                     <div className="menu_background"></div>
 
                     <div className="colorRoller">

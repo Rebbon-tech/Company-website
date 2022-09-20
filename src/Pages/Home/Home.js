@@ -1,4 +1,6 @@
+import React, { useEffect } from 'react'
 import './Home.css'
+import Aos from 'aos'
 import buttonIcon from '../../Assets/Bold-Arrow-Right.svg'
 import Showcase from '../../Assets/Showcase.png'
 import StarOne from '../../Assets/StarOne.svg'
@@ -13,10 +15,14 @@ import Footer from '../../Components/Footer/Footer'
 
 const Home = () =>{
 
+    useEffect(() =>{
+        Aos.init({ duration: 2000})
+    },[])
+
     return(
         <div>
             <div className='home'>
-                <div className='section mnbground first_section'>
+                <div data-aos="fade-up" className='section mnbground first_section'>
                     <div className='section_container fdcolumn'>
                         <div className='contents home_first'>
                             <h1 className='slogan_h1 colorchange'>High-end digital products for Enterprenuers and fast growing Startups.</h1>
@@ -39,7 +45,7 @@ const Home = () =>{
                     </div>
                 </div>
 
-                <div className='section mnbground second_section'>
+                <div data-aos="fade-up" className='section mnbground second_section'>
                     <div className='section_container h100p'>
                         <div className='contents home_second'>
                             <img src={Showcase} alt='showcase' />
@@ -47,7 +53,7 @@ const Home = () =>{
                     </div>
                 </div>
 
-                <div className='section twbground'>
+                <div data-aos="fade-up" className='section twbground'>
                     <div className='section_container'>
                         <div className='contents home_third hfc'>
                             <div className='flex hfc home_third_container'>
@@ -102,7 +108,7 @@ const Home = () =>{
                     </div>
                 </div>
 
-                <div className='section twbground' style={{height: 'fit-content'}}>
+                <div data-aos="fade-up" className='section twbground' style={{height: 'fit-content'}}>
                     <div className='section_container'>
                         <div className='contents home_fourth'>
                             <div className='flex hfc fdcolumn'>

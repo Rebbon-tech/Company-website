@@ -17,6 +17,11 @@
   align-items: center;
   position: fixed;
   z-index: 4;
+  transition: all 0.3s ease;
+}
+
+.dontShowNav{
+  transform: translateY(-100%);
 }
 
 .container {
@@ -38,6 +43,20 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  z-index: 4;
+}
+.logo svg path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 0;
+  animation: logoanimate 1.4s linear infinite alternate;
+  transition: all 0.3s ease-in-out;
+  animation-delay: 0.3s;
+}
+
+@keyframes logoanimate {
+  to{
+    stroke-dashoffset: 600;
+  }
 }
 
 .navloading {
@@ -221,7 +240,7 @@
 .nav_toggler span::before {
   content: "";
   height: 2px;
-  width: 18px;
+  width: 22px;
   background: var(--tin-white);
   position: absolute;
   top: -6px;
@@ -236,7 +255,7 @@
 .nav_toggler span::after {
   content: "";
   height: 2px;
-  width: 18px;
+  width: 22px;
   background: var(--tin-white);
   position: absolute;
   top: 6px;
@@ -292,7 +311,7 @@
 
   .nav_items.open{
     display: block;
-    width: 50vw;
+    width: 70vw;
     position: absolute;
     top: 0;
     right: 0;
@@ -401,6 +420,9 @@
     padding: 0px 20px;
   }
 
+  .nav_items.open{
+    width: 80vw;
+  }
   .nav_items.open .nav_items_list_container {
     height: 70%;
   }
