@@ -1,0 +1,8 @@
+.body {
+  width: 1280px;
+  height: 822px;
+  background: #1a222d;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
