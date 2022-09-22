@@ -9,6 +9,7 @@ import StarTwo from "../../Assets/StarTwo.svg";
 // import curveFour from '../../Assets/curveFour.svg'
 import buildingOne from "../../Assets/buildingOne.png";
 import buildingTwo from "../../Assets/buildingTwo.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -26,12 +27,14 @@ const Home = () => {
                 users first and business goals in mind, for Small business
                 owners and Startups.
               </p>
-              <div className="btn">
-                <div className="Start_a_project_btn">
-                  <p className="btn_text">Start a project</p>
-                  <img src={buttonIcon} alt="button icon"></img>
+              <Link to="/SubmitProjectInfo">
+                <div className="btn">
+                  <div className="Start_a_project_btn">
+                    <p className="btn_text">Start a project</p>
+                    <img src={buttonIcon} alt="button icon"></img>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
             <div className="star_container">
               <div className="starOne_container">

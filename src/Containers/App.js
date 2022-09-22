@@ -3,8 +3,9 @@ import Splash from "../Pages/Splash/Splash";
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import Home from "../Pages/Home/Home";
-import SubmitProjectInfo from "../Pages/SubmitProjectInfo/SubmitProjectInfo";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import SPJ from "../Pages/SubmitProjectInfo/SubmitProjectInfo";
+// SPJ = SubmitProjectInfo
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [splashdisplay, setSplashDisplay] = useState("show");
@@ -17,21 +18,19 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div>
+    <div>
+      <BrowserRouter>
         <Splash Splash={splashdisplay} />
         <header className="App-header">
           <NavBar />
         </header>
 
-        <section>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/SubmitProjectInfo" element={<SubmitProjectInfo />} />
-          </Routes>
-        </section>
-      </div>
-    </Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/SubmitProjectInfo" element={<SPJ />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
