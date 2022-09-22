@@ -5,30 +5,16 @@ import img from "../../Assets/img (15).jpg";
 import "./About.css";
 import Footer from "../../Components//Footer/Footer";
 
-export default function About() {
-  function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
+export default function About({revealAnimation}) {
 
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
-
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
-    }
-  }
-
-  window.addEventListener("scroll", reveal);
+  
+  window.addEventListener("scroll", revealAnimation);
   return (
     <div className="about">
       <div className="about_section mnbground about-uppersection">
         <div className="about_section_container h100p fdcolumn">
           <div className="content about_first">
-            <h1 className="Title">
+            <h1 className="Title  reveal fade-top">
               We are<br></br>Rebbon Tech.{" "}
             </h1>
           </div>

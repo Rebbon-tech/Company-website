@@ -302,7 +302,16 @@
     position: absolute;
     top: 25px;
     right: 41px;
-    
+    transition: all 0.3s ease;
+    animation: backgroundcolorslide 0.5s linear infinite;
+}
+@keyframes backgroundcolorslide {
+    0%{
+        background-color: var(--midnight);
+    }
+    100%{
+        background-color: var(--peal);
+    }
 }
 
 .diagram_contents{
@@ -318,11 +327,12 @@
 
 /* diagram inside */
 
-.diagram_container .highlight{
+.diaani.highlight{
     color: var(--yellow);
 }
-.chighlight{
-    fill: var(--rebbon-blue);
+.dialiani.chighlight{
+    stroke: var(--rebbon-blue);
+    stroke-width: 4;
 }
 
 .discover{

@@ -12,11 +12,14 @@ function App() {
   const [currentRoute, setCurrentRoute] = useState();
   const [displayNav, setDisplayNav] = useState(true);
   const [mobileNavopen, setMobileNavOpen] = useState(false) 
+  const [allowScroll, setAllowScroll] = useState(false) 
   const delay = 5;
 
   useEffect(() => {
-    setSplashDisplay("show");
-    window.setTimeout(() => setSplashDisplay("noShow"), delay * 300);
+    // setSplashDisplay("show");
+    // setAllowScroll(false)
+    unShowSplash()
+    setallowscrolltotrue()
     console.log(route);
 
     //to disallow nav to navigate to current route 
@@ -25,30 +28,43 @@ function App() {
     //to display on swipe left
     swipeToShownav()
     
+    //no scroll before loading finishes
+    noScrollBeforeLoad()
 
+    //to hide bar on scroll
     window.addEventListener('scroll', navScrollFunction)
 
     return () =>{
       window.removeEventListener('scroll', navScrollFunction)
     }
 
-  }, [route]);
+  }, [route,allowScroll]);
 
+  function unShowSplash(){
+    window.setTimeout(() => setSplashDisplay("noShow"), delay * 300);
+  }
+
+  function setallowscrolltotrue(){
+    window.setTimeout(() => setAllowScroll(true), delay * 400);
+  }
   const navigate = (pickroute) => {
+
     if (pickroute !== route){
       setClickedRoute(pickroute);
       window.setTimeout(() => setSplashDisplay("show"), 200);
+      window.setTimeout(() => window.scrollTo(0,0), 1000);
+      window.setTimeout(() => setAllowScroll(false), delay * 300);
       window.setTimeout(() => setRoute(pickroute), delay * 300);
-    }else{
     }
+
   }
 
   function disallowSameNav(){
     if (route === 'home'){
-      setCurrentRoute(<Home />)
+      setCurrentRoute(<Home revealAnimation={revealAnimation}/>)
       setMobileNavOpen(false)
     }else if (route === 'about'){
-      setCurrentRoute(<About />)
+      setCurrentRoute(<About revealAnimation={revealAnimation}/>)
       setMobileNavOpen(false)
     }
   }
@@ -108,6 +124,35 @@ function App() {
       checkDirection()
     })
 
+  }
+
+  function noScrollBeforeLoad(){
+    if (!allowScroll){
+      document.body.classList.add('noscroll')
+      // console.log('noscroll')
+    }else{
+      document.body.classList.remove('noscroll')
+      // console.log('scroll')
+    }
+
+  }
+
+  function revealAnimation() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      // console.log(elementTop)
+      var elementVisible = 100;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+
+    }
   }
   
 
