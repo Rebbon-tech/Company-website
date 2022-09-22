@@ -23,14 +23,13 @@ function App() {
         <header className="App-header">
           <NavBar />
         </header>
-        <Routes>
-          <Route path="/">
-            <Home />
-          </Route>
-          <Route path="/SubmitProjectInfo">
-            <SubmitProjectInfo />
-          </Route>
-        </Routes>
+
+        <section>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/SubmitProjectInfo" element={<SubmitProjectInfo />} />
+          </Routes>
+        </section>
       </div>
     </Router>
   );
