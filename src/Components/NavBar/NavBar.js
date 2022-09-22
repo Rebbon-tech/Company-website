@@ -68,9 +68,15 @@ const NavBar = () => {
         <div className="nav_items">
           <div className="nav_items_list_container">
             <ul className="nav_item_list">
-              <li>Work</li>
-              <li>Services</li>
-              <li>About us</li>
+              <Link to="/Work">
+                <li>Work</li>
+              </Link>
+              <Link to="/Services">
+                <li>Services</li>
+              </Link>
+              <Link to="/About">
+                <li>About us</li>
+              </Link>
             </ul>
           </div>
           <div className="btn">
