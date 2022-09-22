@@ -31,9 +31,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/SubmitProjectInfo" element={<SPJ />} />
-          <Route path="/Work" element={<Work />} />
+          {/* <Route path="/Work" element={<Work />} />
           <Route path="/Services" element={<Services />} />
-          <Route path="/About" element={<About />} />
+          <Route path="/About" element={<About />} /> */}
           <Route />
         </Routes>
       </BrowserRouter>
