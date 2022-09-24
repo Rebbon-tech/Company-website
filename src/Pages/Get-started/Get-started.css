@@ -1,0 +1,257 @@
+:root {
+  --rebbon-blue: #89e3ff;
+  --midnight: #1a222d;
+  --tin-white: #fafffe;
+  --chill-green: #2bd4a4;
+  --yellow: #ffef89;
+  --peal: #ffac89;
+}
+.contaner {
+  background-color: var(--tin-white);
+
+  width: 100%;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+}
+.intro-container {
+  background-image: url("../../Assets/curvet.svg");
+  background-size: 1190px;
+  background-position: center;
+  background-repeat: repeat;
+  height: 700px;
+  padding: 160px 120px;
+  width: 100%;
+  overflow: visible;
+  z-index: 9;
+}
+.intro {
+  height: 500px;
+  width: 100%;
+  overflow: visible;
+}
+.intro h1 {
+  color: var(--midnight);
+  font-weight: 700;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 160px;
+
+  /* or 125% */
+
+  letter-spacing: -0.02em;
+}
+.form-container {
+  background-color: var(--midnight);
+  position: relative;
+  bottom: 120px;
+  height: 1300px;
+  padding: 160px 120px;
+  z-index: 3;
+  width: 100%;
+  overflow: hidden;
+}
+.mini {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.tag {
+  margin-top: 80px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  width: 80%;
+  color: #ffffff;
+}
+.h1 h1 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 80px;
+  /* or 125% */
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+.p p {
+  font-size: 24px;
+  line-height: 30px;
+  /* or 125% */
+}
+.svg {
+  width: 90px;
+  filter: blur(20px);
+  position: relative;
+  right: 1140px;
+  top: 520px;
+}
+.form {
+  width: 600px;
+  margin-top: 60px;
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+}
+.form form label {
+  font-size: 26px;
+  color: var(--tin-white);
+  margin-block: 10px;
+}
+.input {
+  width: 360px;
+  height: 66px;
+  border-radius: 25px;
+  border: 1.5px solid rgb(98, 115, 135);
+  background-color: #1a222d;
+  color: rgb(159, 159, 159);
+  font-size: 24px;
+  padding-left: 13px;
+}
+.text {
+  width: 360px;
+  height: 300px;
+  border-radius: 25px;
+  border: 1.5px solid rgb(98, 115, 135);
+  background-color: #1a222d;
+  color: rgb(159, 159, 159);
+  font-size: 24px;
+  padding-top: 10px;
+  padding-left: 13px;
+}
+@media screen and (max-width: 1024px) {
+  .contaner {
+    width: 100%;
+  }
+  .intro-container {
+    width: 100%;
+    background-size: 1110px;
+  }
+  .intro {
+    width: 100%;
+  }
+  .intro h1 {
+    font-size: 98px;
+    line-height: 110px;
+    /* or 125% */
+    letter-spacing: -0.01em;
+  }
+  .form-container {
+    overflow: hidden;
+    padding-left: 120px 100px;
+  }
+  .tag {
+    width: 100%;
+  }
+  .h1 h1 {
+    font-size: 52px;
+  }
+  .p p {
+    font-size: 20px;
+  }
+  .form {
+    margin-right: -100px;
+  }
+  .svg {
+    top: 50px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .contaner {
+    width: 100%;
+  }
+  .intro-container {
+    width: 100%;
+    background-size: 910px;
+    background-repeat: no-repeat;
+  }
+  .intro {
+    width: 100%;
+  }
+  .intro h1 {
+    font-size: 78px;
+    line-height: 110px;
+    /* or 125% */
+    letter-spacing: -0.01em;
+  }
+  .form-container {
+    bottom: 170px;
+    overflow: hidden;
+    padding-left: 120px 90px;
+  }
+  .tag {
+    width: 100%;
+    margin-left: -70px;
+  }
+  .h1 h1 {
+    font-size: 42px;
+  }
+  .p p {
+    font-size: 15px;
+  }
+  .form {
+    margin-right: -100px;
+  }
+  .svg {
+    top: 50px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .contaner {
+    max-width: 576px;
+    width: 576px;
+  }
+  .intro-container {
+    width: 100%;
+    background-size: 1010px;
+    background-repeat: no-repeat;
+  }
+  .intro {
+    width: 100%;
+    padding: 70px 40px;
+  }
+  .intro h1 {
+    width: 500px;
+    font-size: 68px;
+    position: relative;
+    right: 130px;
+    line-height: 80px;
+    /* or 125% */
+    letter-spacing: -0.06em;
+  }
+  .form-container {
+    bottom: 170px;
+
+    height: 1800px;
+    width: 100%;
+
+    overflow: hidden;
+    padding: 120px 60px;
+  }
+  .tag {
+    width: 100%;
+    margin-left: 0;
+  }
+  .mini {
+    display: flex;
+    flex-direction: column;
+    height: 2000px;
+  }
+  .h1 h1 {
+    font-size: 52px;
+  }
+  .p p {
+    font-size: 19px;
+  }
+  .form {
+    margin-right: 0px;
+  }
+  .svg {
+    top: 20px;
+    right: 0px;
+  }
+}
