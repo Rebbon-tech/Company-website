@@ -16,11 +16,11 @@
   flex-direction: column;
   align-items: center;
   position: fixed;
-  z-index: 4;
+  z-index: 10;
   transition: all 0.3s ease;
 }
 
-.dontShowNav{
+.dontShowNav {
   transform: translateY(-100%);
 }
 
@@ -42,11 +42,13 @@
   width: fit-content;
   cursor: pointer;
   display: flex;
+
   align-items: center;
   z-index: 4;
 }
 .logo svg path {
   stroke-dasharray: 300;
+
   stroke-dashoffset: 0;
   animation: logoanimate 1.4s linear infinite alternate;
   transition: all 0.3s ease-in-out;
@@ -54,7 +56,7 @@
 }
 
 @keyframes logoanimate {
-  to{
+  to {
     stroke-dashoffset: 600;
   }
 }
@@ -77,13 +79,12 @@
   transition: all 0.3s ease;
 }
 
-.nav_things{
+.nav_things {
   display: flex;
   width: 100%;
-  flex-direction: row;  
-  justify-content: space-between; 
+  flex-direction: row;
+  justify-content: space-between;
 }
-
 
 .nav_items_list_container {
   width: 100%;
@@ -116,13 +117,13 @@
   animation: changeCol 1.5s linear infinite, changeBoCol 1.5s linear infinite;
 }
 
-
 @keyframes changeBoCol {
-  0%, 100% {
-      border-bottom-color: var(--peal);
+  0%,
+  100% {
+    border-bottom-color: var(--peal);
   }
-  50%{
-      border-bottom-color: var(--chill-green);    
+  50% {
+    border-bottom-color: var(--chill-green);
   }
 }
 
@@ -232,6 +233,16 @@
   position: relative;
   transition: all 0.3s ease;
 }
+
+.nav_toggler.tint span {
+  background: var(--midnight);
+}
+.nav_toggler.tint span::after {
+  background: var(--midnight);
+}
+.nav_toggler.tint span::before {
+  background: var(--midnight);
+}
 .nav_toggler.open span {
   background-color: transparent;
   transition: all 0.3s ease;
@@ -267,16 +278,13 @@
   top: 0;
 }
 
-.colorRoller{
+.colorRoller {
   display: none;
 }
 
-.colorsecRoller{
+.colorsecRoller {
   display: none;
 }
-
-
-
 
 @media screen and (max-width: 1280px) {
   .container {
@@ -303,13 +311,13 @@
 
   .nav_items {
     display: block;
-    /* transform: translateX(100%); */
-    transition: all 0.1s ease;
+    transition: all 0.3s ease-out;
+    transform: translateX(100%);
     position: absolute;
-    animation: closemenu 0.3s linear;
+    /* animation: closemenu 0.3s linear; */
   }
 
-  .nav_items.open{
+  .nav_items.open {
     display: block;
     width: 70vw;
     position: absolute;
@@ -317,28 +325,28 @@
     right: 0;
     height: 100vh;
     z-index: 1;
-    transition: all 0.1s ease;
-    /* transform: translateX(0%); */
-    animation: openmenu 0.3s linear;
+    transition: all 0.3s ease;
+    transform: translateX(0%);
+    /* animation: openmenu 0.3s linear; */
   }
 
   @keyframes openmenu {
-    from{
+    from {
       transform: translateX(100%);
-    } 
-    to{
+    }
+    to {
       transform: translateX(0%);
-    }   
+    }
   }
   @keyframes closemenu {
-    from{
+    from {
       transform: translateX(0%);
-    } 
-    to{
+    }
+    to {
       transform: translateX(100%);
-    }   
+    }
   }
-  
+
   .nav_items.open .menu_background {
     background: var(--midnight);
     filter: drop-shadow(2px 4px 6px black) opacity(0.7);
@@ -350,27 +358,26 @@
     transition: all 0.3s ease-in-out;
   }
 
-  .nav_things{
+  .nav_things {
     display: none;
   }
 
-  
-  .nav_items.open .colorRoller{
+  .nav_items.open .colorRoller {
     display: block;
     animation: rotate 2s linear infinite;
   }
-  .colorRoller img{
+  .colorRoller img {
     height: 70px;
     width: 70px;
   }
-  
-  .nav_items.open .colorsecRoller{
+
+  .nav_items.open .colorsecRoller {
     display: block;
     position: absolute;
     left: -5vw;
     animation: rotate 2s linear infinite;
   }
-  .colorsecRoller img{
+  .colorsecRoller img {
     height: 90px;
     width: 90px;
   }
@@ -402,15 +409,14 @@
   }
 
   .nav_items.open .nav_item_list li {
-      padding: 20px 0px;
-      font-size: 23px;
+    padding: 20px 0px;
+    font-size: 23px;
   }
 
   .nav_toggler_container {
     display: block;
     transition: all 0.3s ease;
   }
-
 }
 
 @media screen and (max-width: 576px) {
@@ -420,14 +426,14 @@
     padding: 0px 20px;
   }
 
-  .nav_items.open{
+  .nav_items.open {
     width: 80vw;
   }
   .nav_items.open .nav_items_list_container {
     height: 70%;
   }
 
-  .nav_items.open .colorsecRoller{
+  .nav_items.open .colorsecRoller {
     left: -7vw;
   }
 
@@ -439,7 +445,7 @@
   .colorsecRoller img {
     height: 60px;
     width: 60px;
-}
+  }
 
   /* .nav_items {
     display: none;
