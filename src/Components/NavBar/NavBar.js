@@ -97,7 +97,7 @@ const NavBar = ({
         </div>
         }
         <div className={mobileNavopen ? "nav_items open" : "nav_items"}>
-          <div className="menu_background"></div>
+          <div className="menu_background" style = {{ backgroundColor: `${clickedRoute === "services" ? '#fafffe' : '#1a222d'}` }} ></div>
 
           <div className="colorRoller">
             <img src={logoIcon} alt="color animation" />
