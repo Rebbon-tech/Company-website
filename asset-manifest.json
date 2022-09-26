@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/Company-website/static/css/main.0b0e819e.css",
-    "main.js": "/Company-website/static/js/main.8639951f.js",
+    "main.css": "/Company-website/static/css/main.052930ea.css",
+    "main.js": "/Company-website/static/js/main.c1406e83.js",
     "static/js/787.59c5180c.chunk.js": "/Company-website/static/js/787.59c5180c.chunk.js",
     "static/media/buildingTwo.png": "/Company-website/static/media/buildingTwo.11147d20528fff1d428d.png",
     "static/media/Showcase.png": "/Company-website/static/media/Showcase.d95b943fe5e6d4d82533.png",
     "static/media/buildingOne.png": "/Company-website/static/media/buildingOne.c7518ae22efe4a16a8f1.png",
     "static/media/img (15).jpg": "/Company-website/static/media/img (15).de8aa91b7a24a33d4d4c.jpg",
+    "static/media/startedback.png": "/Company-website/static/media/startedback.a9e2489a564f38f7bd8d.png",
     "static/media/rlogo.svg": "/Company-website/static/media/rlogo.e4dc3edd24d121a962ede18f1398dabe.svg",
     "static/media/StarOne.svg": "/Company-website/static/media/StarOne.d87e801dc42cb45dcec80ee13c1330ed.svg",
     "static/media/StarTwo.svg": "/Company-website/static/media/StarTwo.c05ebb22fb5f935de773ba531ade4b90.svg",
     "static/media/Bold-Arrow-Right.svg": "/Company-website/static/media/Bold-Arrow-Right.00f3e9d5b74aadbfc526ae69ca9286e3.svg",
     "index.html": "/Company-website/index.html",
-    "main.0b0e819e.css.map": "/Company-website/static/css/main.0b0e819e.css.map",
-    "main.8639951f.js.map": "/Company-website/static/js/main.8639951f.js.map",
+    "main.052930ea.css.map": "/Company-website/static/css/main.052930ea.css.map",
+    "main.c1406e83.js.map": "/Company-website/static/js/main.c1406e83.js.map",
     "787.59c5180c.chunk.js.map": "/Company-website/static/js/787.59c5180c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b0e819e.css",
-    "static/js/main.8639951f.js"
+    "static/css/main.052930ea.css",
+    "static/js/main.c1406e83.js"
   ]
 }
