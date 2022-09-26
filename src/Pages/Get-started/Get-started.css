@@ -58,7 +58,7 @@
 .form-container {
   background-color: var(--midnight);
   position: relative;
-  height: 1050px;
+  height: 1250px;
   width: 100%;
   overflow: hidden;
 }
@@ -92,9 +92,11 @@
   position: absolute;
   left: -15%;
   top: 40%;
+  z-index: 1;
 }
 .form {
   flex: 0 0 50%;
+  z-index: 2;
 }
 .form form {
   display: flex;
@@ -112,10 +114,11 @@
   border-radius: 20px;
   border: 1.5px solid rgb(98, 115, 135);
   background-color: var(--midnight);
-  color: #606A79;
+  color: var(--tin-white);
   font-size: 16px;
   font-family: 'Manrope';
   padding: 20px 20px;
+  margin-bottom: 10px;
 }
 .input::placeholder {
   color: #606A79;
@@ -134,8 +137,8 @@
   height: 400px;
   border-radius: 20px;
   border: 1.5px solid rgb(98, 115, 135);
-  background-color: var(--midnight);
-  color: #606A79;
+  background-color: transparent;
+  color: var(--tin-white);
   font-size: 16px;
   font-family: 'Manrope';
   padding: 20px 20px;
@@ -157,6 +160,38 @@
 .formbold::-ms-input-placeholder{
   color: var(--tin-white);
   font-weight: 400
+}
+
+.Start_a_project_sub_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 20px;
+  background-color: var(--rebbon-blue);
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+.Start_a_project_sub_btn p {
+  color: var(--midnight);
+  font-weight: 700;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+.Start_a_project_sub_btn img {
+  color: var(--midnight);
+  height: 30px;
+  width: 30px;
+  margin-left: 5px;
+  transition: all 0.3s ease;
+}
+.Start_a_project_sub_btn:hover img {
+  margin-left: 15px;
+  transition: all 0.3s ease;
 }
 
 /* small laptops */

@@ -27,9 +27,11 @@ export default function Footer() {
                         <div className='socials'>
 
                             <div className='btn'>
+                                <a href="mailto:rebbon1tech@gmail.com?subject=Hello%20Rebbon%20Tech&body=My%20name%20is">
                                 <div className="socials_btn">
                                     <p className='btn_text'>hello@rebbontech.co</p>
                                 </div>
+                                </a>
                             </div>
                             <div className='socials_btn_container'>
                                 <div className='social_btn '>

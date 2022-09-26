@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Footer from "../../Components/Footer/Footer";
 import "./Get-started.css";
+import buttonIcon from "../../Assets/Bold-Arrow-Right.svg";
 
 export default function Getstarted() {
   const [form, setform] = useState({});
@@ -63,9 +64,11 @@ export default function Getstarted() {
                   placeholder="select one..."
                   onChange={handleChange}
                 >
-                  <option value="1">1</option> 
-                  <option value="2">2</option>
-                  <option value="2">3</option>
+                  <option value="Web Development">Web Development</option> 
+                  <option value="App Development">App Development</option>
+                  <option value="Game Development">Game Development</option>
+                  <option value="Business">Business</option>
+                  <option value="Others">Others</option>
                 </select>
 
                 <label htmlFor="Estimate">Estimated Budget</label>
@@ -87,6 +90,11 @@ export default function Getstarted() {
                   name="About-project"
                   onChange={handleChange}
                 />
+
+                <div className="Start_a_project_sub_btn">
+                    <p className='btn_text'>Start a project</p>
+                    <img src={buttonIcon} alt='button icon'></img>
+                </div>
               </form>
             </div>
             <div className="svg">
