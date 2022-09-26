@@ -7,38 +7,46 @@ import About from "../Pages/About/About";
 
 function App() {
   const [splashdisplay, setSplashDisplay] = useState("show");
-  const [route, setRoute] = useState('home');
+  const [route, setRoute] = useState('');
   const [clickedRoute, setClickedRoute] = useState('home');
   const [currentRoute, setCurrentRoute] = useState();
   const [displayNav, setDisplayNav] = useState(true);
   const [mobileNavopen, setMobileNavOpen] = useState(false) 
   const [allowScroll, setAllowScroll] = useState(false) 
   const delay = 5;
+  useEffect(() => {
+    
+    setRoute(window.localStorage.getItem("route"));
+  },[])
 
   useEffect(() => {
     // setSplashDisplay("show");
     // setAllowScroll(false)
     unShowSplash()
     setallowscrolltotrue()
-    console.log(route);
-
-    //to disallow nav to navigate to current route 
-    disallowSameNav()
+    setClickedRoute(route)
+    console.log("route", route);
+  
+    // to change route that displays on the screen
+    changePageThatDisplays()
 
     //to display on swipe left
     swipeToShownav()
     
     //no scroll before loading finishes
     noScrollBeforeLoad()
-
+    
     //to hide bar on scroll
     window.addEventListener('scroll', navScrollFunction)
+
+    window.localStorage.setItem("route", route);
 
     return () =>{
       window.removeEventListener('scroll', navScrollFunction)
     }
-
+    
   }, [route,allowScroll]);
+  
 
   function unShowSplash(){
     window.setTimeout(() => setSplashDisplay("noShow"), delay * 300);
@@ -55,12 +63,13 @@ function App() {
       window.setTimeout(() => window.scrollTo(0,0), 1000);
       window.setTimeout(() => setAllowScroll(false), delay * 300);
       window.setTimeout(() => setRoute(pickroute), delay * 300);
+      
     }
 
   }
 
-  function disallowSameNav(){
-    if (route === 'home'){
+  function changePageThatDisplays(){
+    if (route === 'home' || route === ''){
       setCurrentRoute(<Home revealAnimation={revealAnimation}/>)
       setMobileNavOpen(false)
     }else if (route === 'about'){
@@ -94,6 +103,16 @@ function App() {
     let touchDiffleft = 0;
     let touchDiffright = 0;
         
+    
+    document.addEventListener('touchstart', e => {
+      touchstartX = e.changedTouches[0].screenX
+    })
+    
+    document.addEventListener('touchend', e => {
+      touchendX = e.changedTouches[0].screenX
+      checkDirection()
+    })
+
     function checkDirection() {
       touchDiffleft = touchstartX - touchendX; 
       if (touchendX < touchstartX){
@@ -114,15 +133,6 @@ function App() {
         }
       }
     }
-
-    document.addEventListener('touchstart', e => {
-      touchstartX = e.changedTouches[0].screenX
-    })
-
-    document.addEventListener('touchend', e => {
-      touchendX = e.changedTouches[0].screenX
-      checkDirection()
-    })
 
   }
 
